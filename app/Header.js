@@ -63,14 +63,14 @@ const Header = () => {
         visible: {
           x: 0,
           transition: {
-            delay: 0.1,
+            delay: 0.02,
             type: 'tween'
           }
         },
         hidden: {
           x: 800,
           transition: {
-            delay: 0.1,
+            delay: 0.02,
             duration: 0.2,
             type: 'tween'
           }
@@ -83,9 +83,6 @@ const Header = () => {
                 className='HeaderLogo' /> 
             {isMobile ? (
                 <motion.button
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, type: "tween" }}
                     className={`menu-button ${menuOpen ? 'open' : ''}`}
                     onClick={() => setMenuOpen(!menuOpen)}>
                     <motion.div className="menu-icon">

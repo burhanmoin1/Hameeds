@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import firstimage from './exampleforcarousel.jpg';
 import secondimage from './leatherforexample.jpg';
 import thirdimage from './thirdimageforcarousel.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const imagesDetails = [
   {
@@ -31,7 +33,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagesDetails.length);
-    }, 5000);
+    }, 18000);
 
     return () => clearInterval(interval);
   }, []);
@@ -53,6 +55,7 @@ const Carousel = () => {
   return (
     <div className='carousel-container'>
       <div className='carousel'>
+        <h2 className='Hameedsheading'>Hameed's</h2>
         <div className='slides' style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
           {imagesDetails.map((item, index) => (
             <div
@@ -68,10 +71,10 @@ const Carousel = () => {
           ))}
         </div>
         <button className='arrow prev' onClick={goToPrevSlide}>
-        &larr;
+        <FontAwesomeIcon icon={faArrowLeft} />
         </button>
         <button className='arrow next' onClick={goToNextSlide}>
-        &rarr;
+        <FontAwesomeIcon icon={faArrowRight} />
         </button>
         <div className='dots'>
           {imagesDetails.map((_, index) => (
