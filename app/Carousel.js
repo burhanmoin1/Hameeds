@@ -1,27 +1,30 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import firstimage from './exampleforcarousel.jpg';
-import secondimage from './leatherforexample.jpg';
-import thirdimage from './thirdimageforcarousel.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import firstimage from './blackleather.jpg';
+import secondimage from './leatherforexample.jpg';
+import thirdimage from './thirdimageforcarousel.jpg';
 
 const imagesDetails = [
   {
     id: 1,
     image: firstimage.src,
-    title: 'Leather finishing chemicals',
-    details: 'Top Notch Chemicals'
+    category: 'Our Products',
+    title: 'Leather Finishing',
+    details: "Leather finishing chemicals are a vital component in the leather manufacturing process, contributing to the final appearance, feel, and durability of leather products. "
   },
   {
     id: 2,
     image: secondimage.src,
+    category: 'About Us',
     title: 'Wetend Chemicals',
     details: 'Top Notch Chemicals'
   },
   {
     id: 3,
     image: thirdimage.src,
+    category: 'News and Events',
     title: 'Shoe care',
     details: 'Top Notch Chemicals'
   }
@@ -33,7 +36,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagesDetails.length);
-    }, 18000);
+    }, 1800000);
 
     return () => clearInterval(interval);
   }, []);
@@ -49,6 +52,7 @@ const Carousel = () => {
   };
 
   const goToSlide = (index) => {
+    console.log('Go to slide clicked');
     setCurrentImageIndex(index);
   };
 
@@ -64,17 +68,18 @@ const Carousel = () => {
             >
               <img src={item.image} alt={`Slide ${index}`} />
               <div className="slide-content">
-                <h2>{item.title}</h2>
-                <p>{item.details}</p>
+                <h2 className='carousel-category'>{item.category}</h2>
+                <h2 className='carousel-title'>{item.title}</h2>
+                <p className='carousel-details'>{item.details}</p>
               </div>
             </div>
           ))}
         </div>
         <button className='arrow prev' onClick={goToPrevSlide}>
-        <FontAwesomeIcon icon={faArrowLeft} />
+          <FontAwesomeIcon icon={faArrowLeft} />
         </button>
         <button className='arrow next' onClick={goToNextSlide}>
-        <FontAwesomeIcon icon={faArrowRight} />
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
         <div className='dots'>
           {imagesDetails.map((_, index) => (
