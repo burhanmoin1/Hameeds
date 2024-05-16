@@ -79,7 +79,7 @@ const Header = () => {
 
     return ( 
         <motion.div className="main-header">
-            <motion.img src={HameedsLogo.src} initial={{ opacity: 0}} animate={{ opacity:1}} transition={{duration: 0.6, type: "tween", delay: .4}}
+            <motion.img src={HameedsLogo.src}
                 className='HeaderLogo' /> 
             {isMobile ? (
                 <motion.button

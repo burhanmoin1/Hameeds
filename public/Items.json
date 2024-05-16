@@ -1,0 +1,26 @@
+{
+    "items": {
+      "bootstrap": [
+        {
+          "id": 1,
+          "title": "Leather",
+          "body": "Bootstrap Carousel Example",
+          "imageUrl": "exampleforcarousel.jpg"
+        },
+        {
+          "id": 2,
+          "title": "City Views",
+          "body": "Bootstrap Carousel Example",
+          "imageUrl": "leatherforexample.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Wild Life",
+          "body": "Bootstrap Carousel Example",
+          "imageUrl": "thirdimageforcarousel.jpg"
+        }
+      ]
+    }
+  }
+  
+  
