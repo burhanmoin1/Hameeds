@@ -11,7 +11,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 14000);
+    }, 18000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -43,10 +43,10 @@ const Carousel = () => {
         ))}
       </div>
       <button className='arrow prev' onClick={goToPrevSlide}>
-        &lt;
+        &larr;
       </button>
       <button className='arrow next' onClick={goToNextSlide}>
-        &gt;
+        &rarr;
       </button>
       <div className='dots'>
         {images.map((_, index) => (
