@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import firstimage from './blackleather.jpg';
@@ -36,32 +36,104 @@ const imagesDetails = [
 
 const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const startXRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const [timer, setTimer] = useState(null);
+
+  const resetTimer = () => {
+    clearInterval(timer); // clear previous timer
+    const newTimer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagesDetails.length);
+    }, 18000); // set new timer
+    setTimer(newTimer);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagesDetails.length);
-    }, 1800000);
-
+    }, 18000);
+  
+    resetTimer(); // Reset the timer whenever the component mounts
+  
     return () => clearInterval(interval);
   }, []);
+  
 
   const goToNextSlide = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagesDetails.length);
+    resetTimer(); 
   };
 
   const goToPrevSlide = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? imagesDetails.length - 1 : prevIndex - 1
     );
+    resetTimer(); 
+  };
+
+  const handleTouchStart = (e) => {
+    startXRef.current = e.touches[0].clientX;
+    isDraggingRef.current = true;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDraggingRef.current) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startXRef.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        goToPrevSlide();
+      } else {
+        goToNextSlide();
+      }
+      isDraggingRef.current = false;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    isDraggingRef.current = false;
+  };
+
+  const handleMouseDown = (e) => {
+    startXRef.current = e.clientX;
+    isDraggingRef.current = true;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDraggingRef.current) return;
+    const currentX = e.clientX;
+    const diff = currentX - startXRef.current;
+    if (Math.abs(diff) > 200) {
+      if (diff > 0) {
+        goToPrevSlide();
+      } else {
+        goToNextSlide();
+      }
+      isDraggingRef.current = false;
+    }
+  };
+
+  const handleMouseUp = () => {
+    isDraggingRef.current = false;
   };
 
   const goToSlide = (index) => {
     console.log('Go to slide clicked');
     setCurrentImageIndex(index);
+    resetTimer(); 
   };
 
   return (
-    <div className='carousel-container'>
+    <div
+      className='carousel-container'
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+    >
       <div className='carousel'>
         <h2 className='Hameedsheading'>Hameed's</h2>
         <div className='slides' style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
