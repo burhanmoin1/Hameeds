@@ -5,6 +5,7 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import firstimage from './blackleather.jpg';
 import secondimage from './leatherforexample.jpg';
 import thirdimage from './thirdimageforcarousel.jpg';
+import Link from 'next/link';
 
 const imagesDetails = [
   {
@@ -12,21 +13,24 @@ const imagesDetails = [
     image: firstimage.src,
     category: 'Our Products',
     title: 'Leather Finishing',
-    details: "Leather finishing chemicals are a vital component in the leather manufacturing process, contributing to the final appearance, feel, and durability of leather products. "
+    details: "Leather finishing chemicals are a vital component in the leather manufacturing process, contributing to the final appearance, feel, and durability of leather products.",
+    link: '/products'
   },
   {
     id: 2,
-    image: secondimage.src,
+    image: thirdimage.src,
     category: 'About Us',
-    title: 'Wetend Chemicals',
-    details: 'Top Notch Chemicals'
+    title: "Innovators in Leather Solutions",
+    details: "Hameed’s, a vanguard in the leather industry since 2020, pioneers in innovation with our comprehensive range of leather solutions. Situated in Korangi, Karachi, our cutting-edge facility caters to diverse customer needs nationwide.",
+    link: '/aboutus'
   },
   {
     id: 3,
-    image: thirdimage.src,
+    image: secondimage.src,
     category: 'News and Events',
     title: 'Shoe care',
-    details: 'Top Notch Chemicals'
+    details: 'Top Notch Chemicals',
+    link: '/newsandevents'
   }
 ];
 
@@ -71,6 +75,11 @@ const Carousel = () => {
                 <h2 className='carousel-category'>{item.category}</h2>
                 <h2 className='carousel-title'>{item.title}</h2>
                 <p className='carousel-details'>{item.details}</p>
+                <Link href={item.link} className="learnmorecontainer">
+                <button className="learnmorebutton">
+                Learn More<span className='learnmorearrow'><FontAwesomeIcon icon={faArrowRight} /></span> 
+                </button>
+                </Link>
               </div>
             </div>
           ))}
