@@ -436,3 +436,72 @@
   }  
 
 }
+
+.Companydetails {
+  background-color: #eceaea;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.companyheading {
+  font-size: 3rem;
+  color: #000;
+  align-self: center;
+  transform: translateY(140%);
+  font-family: "Radio Canada Big";
+  letter-spacing: -1px;
+}
+
+.aboutusimg {
+  position: absolute;
+  height: 80vh;
+  width: 40vmin;
+  transform: translateX(100%);
+}
+
+.companypara {
+  width: 80vmin;
+  align-self: center;
+  transform: translateY(20%) translateX(36%);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 767.98px) {
+
+  
+.Companydetails {
+  background-color: #eceaea;
+  height: 180vh;
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+}
+
+.companyheading {
+  font-size: 3rem;
+  color: #000;
+  align-self: flex-start;
+  transform: translateY(840%);
+  margin: 20px;
+  z-index: 100;
+  font-family: "Radio Canada Big";
+  letter-spacing: -1px;
+}
+
+.aboutusimg {
+  position: absolute;
+  height: 60vh;
+  width: 96vmin;
+  transform: translateX(0%);
+  align-self: center;
+}
+
+.companypara {
+  width: 80vmin;
+  align-self: center;
+  transform: translateY(190%) translateX(0%);
+  font-size: 1.2rem;
+}
+
+}

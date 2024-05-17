@@ -118,7 +118,6 @@ const Carousel = () => {
       }
       isDraggingRef.current = false;
     }
-    resetTimer();
   };
 
   const handleMouseUp = () => {

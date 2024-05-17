@@ -1,4 +1,5 @@
 import Carousel from "./Carousel";
+import Companydetails from "./Companydetails";
 import Header from "./Header";
 
 
@@ -8,6 +9,7 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"/>
         <Header />
         <Carousel />
+        <Companydetails />
     </main>
   );
 }
