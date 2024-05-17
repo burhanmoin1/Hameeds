@@ -27,10 +27,10 @@ const imagesDetails = [
   {
     id: 3,
     image: secondimage.src,
-    category: 'News and Events',
+    category: 'Our Products',
     title: 'Shoe care',
-    details: 'Top Notch Chemicals',
-    link: '/newsandevents'
+    details: "Shoe leather care chemicals play a crucial role in maintaining the quality, appearance, and longevity of leather footwear. These chemicals are designed to clean, condition, protect, and enhance the leather, ensuring that your shoes remain in optimal condition over time.",
+    link: '/products'
   }
 ];
 
@@ -103,7 +103,14 @@ const Carousel = () => {
     if (!isDraggingRef.current) return;
     const currentX = e.clientX;
     const diff = currentX - startXRef.current;
-    if (Math.abs(diff) > 200) {
+  
+    // Calculate the new position of the slides based on the drag distance
+    const newPosition = -currentImageIndex * 100 + (diff / window.innerWidth) * 100;
+  
+    // Update the position of the slides
+    document.querySelector('.slides').style.transform = `translateX(${newPosition}%)`;
+  
+    if (Math.abs(diff) > 300) {
       if (diff > 0) {
         goToPrevSlide();
       } else {
@@ -111,6 +118,7 @@ const Carousel = () => {
       }
       isDraggingRef.current = false;
     }
+    resetTimer();
   };
 
   const handleMouseUp = () => {

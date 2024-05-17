@@ -232,7 +232,6 @@
   width: 34vw;
   transform: translateX(160%) translateY(20%);
   height: 46vh;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, .4);
   border-radius: 4px;
 }
 
@@ -282,6 +281,7 @@
   font-size: 2.8rem;
   font-weight: 700;
   margin-top: 20px;
+  color: #05200b;
   margin-bottom: 10px;
   letter-spacing: -1px;
 }
@@ -296,7 +296,7 @@
 .dots {
   display: flex;
   justify-content: center;
-  margin-top: -140px;
+  margin-top: -160px;
 }
 
 .dot {
@@ -307,7 +307,7 @@
   margin: 5px;
   z-index: 90;
   cursor: pointer;
-  border: 10px solid #f0f0f0;
+  border: 10px solid #fafafa;
   
 }
 
@@ -321,7 +321,7 @@
 }
 
 .dot.active {
-  border: 10px solid green;
+  border: 10px solid #25873c;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, .2);
 }
 
