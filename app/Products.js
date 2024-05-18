@@ -1,4 +1,4 @@
-import products from './products.jpg';
+import products from './Products.jpg';
 import shoecare from './shoecare.jpg';
 import leatherfinishing from './leatherfinishing.jpg';
 import staricon from './staricon.png';
