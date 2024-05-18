@@ -135,7 +135,7 @@
 
 .menu-overlay {
   position: fixed;
-  top: 12.8%;
+  top: 11.6%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -153,12 +153,13 @@
 }
 
 .menu-items > .menu-item {  
-  transform: translateY(-580%) translateX(20%);
+  transform: translateY(-580%) translateX(0%);
   cursor: pointer;
   position: relative;
   width: 100%;
   margin-top: 80px;
-  margin-left: 40px;
+  margin-left: 0px;
+  text-align: center;
 }
 
 .menulink {
