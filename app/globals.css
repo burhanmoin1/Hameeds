@@ -148,21 +148,26 @@
 
 .menu-items {
   text-align: end;
-  color: rgb(65, 95, 77);
+  text-decoration: none !important;
   display: block;
 }
 
-.menu-items > .menu-item {
-  margin: 10px;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  transform: translateY(-120%) translateX(20%);
+.menu-items > .menu-item {  
+  transform: translateY(-580%) translateX(20%);
   cursor: pointer;
   position: relative;
   width: 100%;
+  margin-top: 140px;
+  margin-left: 40px;
 }
 
+.menulink {
+  text-decoration: none;
+  color: rgb(65, 95, 77) !important;
+  margin: 180px;
+}
 .menu-items > .menu-item {
+  
   transition: text-decoration 3s;
 }
 .menu-items:hover > .menu-item {
@@ -198,7 +203,7 @@
       }
 
     .menu-items {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 800;
       }
 }
@@ -473,21 +478,28 @@
 
 .learn-more-button {
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .learn-more-button:hover{
   opacity: .5;
 }
 
+.about-us-button {
+  cursor: pointer;
+  margin-left: 320px;
+}
+
 @media (max-width: 767.98px) {
 
+  .about-us-button {
+    margin-left: 150px;
+  }
   
 .Companydetails {
   background-color: #eceaea;
   height: 163vh;
   display: flex;
-  margin-top: 40px;
+  margin-top: 60px;
   flex-direction: column;
 }
 
@@ -528,6 +540,7 @@
   align-items: center;
   font-family: "Radio Canada Big";
   font-size: 28px;
+  background-color: rgb(255, 251, 251);
 }
 
 .service-item {
@@ -538,34 +551,9 @@
   align-items: center;
 }
 
-.heading-container {
-  display: flex;
-  align-items: flex-start;
-  margin: 10px;
-  margin-left: 200px;
-  position: relative;
-}
-
-.main-heading {
-  margin: 0;
-  position: relative;
-  font-size: 28px;
-}
-
 .buildingicon{
 margin-left: 2px;
 }
-
-.main-heading::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%; 
-  height: 2px; 
-  background-color: black; 
-}
-
 
 .text-container {
   text-align: center;
@@ -586,7 +574,7 @@ margin-left: 2px;
 
 .service-para {
   width: 90%;
-  font-size: 16px;
+  font-size: 1.2rem;
   margin-left: 4%;
 }
 
@@ -672,10 +660,10 @@ color: gray;
 @media only screen and (min-width: 0px) and (max-width: 1024px) {
 .service-item {
   display: block;
-  margin-bottom: 20px;
   text-align: center; /* Center the content */
-  font-size: 15px;
-  margin: 20px;
+  font-size: 1.3rem;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .main-heading::before {
@@ -688,9 +676,16 @@ color: gray;
   margin-left: 10px;
 }
 
+.service-para {
+  font-size: 1.3rem;
+  width: 78vmin;
+  font-weight: 300;
+  margin-left: 0;
+}
+
 .main-heading {
-  margin-top: 10px;
-  font-size: 22px;
+  margin-top: 20px;
+  font-size: 2rem;
 }
 .service-item .image-container {
   width: 80%; /* Adjust image container width */
@@ -700,6 +695,10 @@ color: gray;
 .service-item .text-container {
   width: 80%; /* Adjust text container width */
   margin: 0 auto; /* Center the text */
+}
+
+.service-heading {
+  font-size: 1.3rem;
 }
 
 .explore-more-button {
@@ -713,4 +712,203 @@ color: gray;
   display: block;
   width: 100%; /* Adjust image width */
 }
+}
+
+.supportcontainer {
+  background-color: rgba(238, 235, 247, 0.25);
+  height: auto;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  font-family: "Radio Canada Big";
+}
+
+.supportheading {
+  margin: 20px;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+.contactus{
+  margin: 20px;
+}
+
+.twopartcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-divider {
+  margin: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form textarea {
+  margin: 10px;
+  padding: 30px;
+}
+
+.Contact-Information{
+  margin: 20px;
+  margin-left: 120px;
+}
+
+.supportform-button {
+  width: auto;
+  border-radius: 6px;
+  align-self: center;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.supportform-button:hover {
+  background-color: transparent;
+}
+
+.google-map {
+  width: 600px;
+  height: 450px;
+  border: 0;
+}
+
+.contactparagraph:first-of-type {
+  font-size: 1.4rem !important;
+  font-weight: 700;
+  margin-left: -10px;
+}
+
+@media (max-width: 767.98px) {
+
+  .google-map {
+      width: 100%; /* Make the iframe take the full width of its container */
+      height: 30vh; /* Adjust the height as needed */
+    }
+
+    .Contact-Information{
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .contactparagraph:first {
+      font-size: 2rem !important;
+    }
+    
+
+  .twopartcontainer {
+      display: flex;
+      margin: 20px;
+      flex-direction: column;
+  }
+
+  .form input,
+  .form textarea
+   {
+      margin: 4px;
+      margin-top: 10px;
+      padding: 30px;
+  }
+
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1%;
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Radio Canada Big";
+  height: auto;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-logo img {
+  height: 20vh;
+}
+
+.footer-number{
+  cursor: pointer;
+}
+
+.footer-nav {
+  list-style-type: none;
+  margin-top: 10px;
+  text-decoration: none !important;
+}
+
+.footer-nav li {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-decoration: none !important;
+}
+
+.footer-link {
+  color: inherit; /* Use the parent's color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-text {
+  text-align: end;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    height: auto;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+
+  .footer-address p,
+  .footer-number p {
+    margin: 5px 10px;
+    padding: 1%;
+  }
+
+  .footer-number{
+    margin-left: 5%;
+    width: 50%;
+  }
+
+  .social-links{
+    margin-top: 10px;
+  }
+
+  .footer-column {
+    flex: 1 0 50%; /* Two columns per row */
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .social-links a {
+    margin: 1%;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    color: #fff;
+    padding-left: 19%;
+    margin-top: 17%;
+  }
+
+  .footer-nav {
+    list-style-type: none;
+    font-size: 1.2rem;
+
+  }
+
+  .request-quote-btn {
+    padding: 8px 18px;
+    margin-left: 12%;
+  }
 }

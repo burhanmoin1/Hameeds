@@ -20,22 +20,22 @@ const Header = () => {
       return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-    const scrollToSection = () => {
-      const section = document.getElementById('blackcontainer');
+    const scrollToAboutUsSection = () => {
+      const section = document.getElementById('aboutus');
       if (section) {
           section.scrollIntoView({ behavior: 'smooth' });
       }
   };
 
-  const scrollToAboutSection = () => {
-    const section = document.getElementById('aboutme');
+  const scrollToContactUsSection = () => {
+    const section = document.getElementById('contactus');
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 };
 
-  const scrollToPortfolioSection = () => {
-    const section = document.getElementById('portfolio');
+  const scrollToProductsSection = () => {
+    const section = document.getElementById('products');
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
@@ -93,11 +93,9 @@ const Header = () => {
                 </motion.button>
             ) : (
                 <div className="desktop-links">
-                    <a className="individual-link">Home</a>
-                    <a className="individual-link">About Us</a>
-                    <a className="individual-link">Contact Us</a>
-                    <a className="individual-link">News and Events</a>
-                    <a className="individual-link">Products</a>
+                    <a href='/#aboutus' className="individual-link">About Us</a>
+                    <a href='/#contactus' className="individual-link">Contact Us</a>
+                    <a href='/#products' className="individual-link">Products</a>
                 </div>
             )}
             <AnimatePresence>
@@ -110,11 +108,9 @@ const Header = () => {
                     variants={navContainer}
                 >
                     <div className="menu-items">
-                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.1}} >Home</motion.div>
-                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.18}} onClick={scrollToSection}>About Us</motion.div>
-                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.24}} onClick={scrollToPortfolioSection}>Contact Us</motion.div>
-                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.32}} onClick={scrollToAboutSection}>News and Events</motion.div>
-                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.38}} onClick={scrollToAboutSection}>Products</motion.div>
+                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.1}} onClick={scrollToAboutUsSection}>About Us</motion.div>
+                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.18}} onClick={scrollToContactUsSection}>Contact Us</motion.div>
+                        <motion.div className='menu-item' initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay: 0.32}} onClick={scrollToProductsSection}>Products</motion.div>
                     </div>
                 </motion.div>
             )}
