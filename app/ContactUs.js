@@ -14,10 +14,10 @@ const ContactUs = () => {
                 <strong>Address:</strong> St 16/2 Sector 7-A Korangi Industrial Area Karachi 
                 </p>
                 <p className='contactparagraph'>
-                <strong>Phone:</strong> <a href="tel:+923219244672">+923454845555</a>
+                <strong>Phone:</strong> <a href="tel:+923454845555">+923454845555</a>
                 </p>
                 <p className='contactparagraph'>
-                <strong>Email:</strong> <a href="mailto:deltacn2011@gmail.com">info@thehameeds.com</a>
+                <strong>Email:</strong> <a href="mailto:info@thehameeds.com">info@thehameeds.com</a>
                 </p>
                 <div className="location-map">
                 <iframe
