@@ -14,7 +14,7 @@ const imagesDetails = [
     category: 'Our Products',
     title: 'Leather Finishing',
     details: "Leather finishing chemicals are a vital component in the leather manufacturing process, contributing to the final appearance, feel, and durability of leather products. Hameeds has state-of-the-art leather finishing facilities to accommodate finishing.",
-    link: '/products'
+    link: '/#products'
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const imagesDetails = [
     category: 'About Us',
     title: "Innovators in Leather Solutions",
     details: "Hameeds, a vanguard in the leather industry since 2020, pioneers in innovation with our comprehensive range of leather solutions. Situated in Korangi, Karachi, our cutting-edge facility caters to diverse customer needs nationwide.",
-    link: '/aboutus'
+    link: '/#aboutus'
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const imagesDetails = [
     category: 'Our Products',
     title: 'Shoe care',
     details: "Shoe leather care chemicals play a crucial role in maintaining the quality, appearance, and longevity of leather footwear. At Hameeds we make sure these chemicals are designed to clean, condition, protect, and enhance the leather, ensuring that your shoes remain in optimal condition over time.",
-    link: '/products'
+    link: '/#products'
   }
 ];
 
@@ -154,7 +154,7 @@ const Carousel = () => {
                 <h2 className='carousel-category'>{item.category}</h2>
                 <h2 className='carousel-title'>{item.title}</h2>
                 <p className='carousel-details'>{item.details}</p>
-                <Link href='/#products' className="learnmorecontainer">
+                <Link href={item.link} className="learnmorecontainer">
                 <button className="learnmorebutton">
                 Learn More<span className='learnmorearrow'><FontAwesomeIcon icon={faArrowRight} /></span> 
                 </button>
