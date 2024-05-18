@@ -13,7 +13,7 @@ const imagesDetails = [
     image: firstimage.src,
     category: 'Our Products',
     title: 'Leather Finishing',
-    details: "Leather finishing chemicals are a vital component in the leather manufacturing process, contributing to the final appearance, feel, and durability of leather products.",
+    details: "Leather finishing chemicals are a vital component in the leather manufacturing process, contributing to the final appearance, feel, and durability of leather products. Hameed's has state-of-the-art leather finishing facilities to accommodate finishing.",
     link: '/products'
   },
   {
@@ -21,7 +21,7 @@ const imagesDetails = [
     image: thirdimage.src,
     category: 'About Us',
     title: "Innovators in Leather Solutions",
-    details: "Hameed’s, a vanguard in the leather industry since 2020, pioneers in innovation with our comprehensive range of leather solutions. Situated in Korangi, Karachi, our cutting-edge facility caters to diverse customer needs nationwide.",
+    details: "Hameed's, a vanguard in the leather industry since 2020, pioneers in innovation with our comprehensive range of leather solutions. Situated in Korangi, Karachi, our cutting-edge facility caters to diverse customer needs nationwide.",
     link: '/aboutus'
   },
   {
@@ -29,7 +29,7 @@ const imagesDetails = [
     image: secondimage.src,
     category: 'Our Products',
     title: 'Shoe care',
-    details: "Shoe leather care chemicals play a crucial role in maintaining the quality, appearance, and longevity of leather footwear. These chemicals are designed to clean, condition, protect, and enhance the leather, ensuring that your shoes remain in optimal condition over time.",
+    details: "Shoe leather care chemicals play a crucial role in maintaining the quality, appearance, and longevity of leather footwear. At Hameed's we make sure these chemicals are designed to clean, condition, protect, and enhance the leather, ensuring that your shoes remain in optimal condition over time.",
     link: '/products'
   }
 ];
