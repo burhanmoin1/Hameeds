@@ -439,31 +439,35 @@
 
 .Companydetails {
   background-color: #eceaea;
-  height: 80vh;
+  height: auto;
   display: flex;
   flex-direction: column;
+  margin-top: -60px;
 }
 
 .companyheading {
   font-size: 3rem;
   color: #000;
   align-self: center;
-  transform: translateY(140%);
+  transform: translateX(-1%) translateY(220%);
   font-family: "Radio Canada Big";
   letter-spacing: -1px;
+  margin-right: 120px;
 }
 
 .aboutusimg {
-  position: absolute;
+  position: relative;
   height: 80vh;
   width: 40vmin;
-  transform: translateX(100%);
+  transform: translateX(80%);
 }
 
 .companypara {
   width: 80vmin;
   align-self: center;
-  transform: translateY(20%) translateX(36%);
+  position: absolute;
+  margin-top: 220px;
+  transform: translateY(8%) translateX(26%);
   font-size: 1.4rem;
 }
 
@@ -472,7 +476,7 @@
   
 .Companydetails {
   background-color: #eceaea;
-  height: 180vh;
+  height: auto;
   display: flex;
   margin-top: 40px;
   flex-direction: column;
@@ -484,9 +488,11 @@
   align-self: flex-start;
   transform: translateY(840%);
   margin: 20px;
-  z-index: 100;
+  z-index: 10;
   font-family: "Radio Canada Big";
   letter-spacing: -1px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .aboutusimg {
@@ -500,8 +506,9 @@
 .companypara {
   width: 80vmin;
   align-self: center;
-  transform: translateY(190%) translateX(0%);
+  transform: translateY(0%) translateX(0%);
   font-size: 1.2rem;
+  margin-top: 500px;
 }
 
 }
