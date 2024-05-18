@@ -154,7 +154,7 @@ const Carousel = () => {
                 <h2 className='carousel-category'>{item.category}</h2>
                 <h2 className='carousel-title'>{item.title}</h2>
                 <p className='carousel-details'>{item.details}</p>
-                <Link href={item.link} className="learnmorecontainer">
+                <Link href='/#products' className="learnmorecontainer">
                 <button className="learnmorebutton">
                 Learn More<span className='learnmorearrow'><FontAwesomeIcon icon={faArrowRight} /></span> 
                 </button>
