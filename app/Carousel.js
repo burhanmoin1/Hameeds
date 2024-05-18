@@ -18,7 +18,7 @@ const imagesDetails = [
   },
   {
     id: 2,
-    image: thirdimage.src,
+    image: secondimage.src,
     category: 'About Us',
     title: "Innovators in Leather Solutions",
     details: "Hameeds, a vanguard in the leather industry since 2020, pioneers in innovation with our comprehensive range of leather solutions. Situated in Korangi, Karachi, our cutting-edge facility caters to diverse customer needs nationwide.",
@@ -26,7 +26,7 @@ const imagesDetails = [
   },
   {
     id: 3,
-    image: secondimage.src,
+    image: thirdimage.src,
     category: 'Our Products',
     title: 'Shoe care',
     details: "Shoe leather care chemicals play a crucial role in maintaining the quality, appearance, and longevity of leather footwear. At Hameeds we make sure these chemicals are designed to clean, condition, protect, and enhance the leather, ensuring that your shoes remain in optimal condition over time.",
