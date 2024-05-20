@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faShare } from '@fortawesome/free-solid-svg-icons';
-
 const ContactUs = () => {
     return (
         <section id='contactus'>
