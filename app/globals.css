@@ -459,7 +459,7 @@
 .aboutusimg {
   height: 60vh;
   position: absolute;
-  width: 30vmin;
+  width: 34vmin;
   transform: translateX(150%);
   align-self: flex-start;
 }
