@@ -498,7 +498,7 @@
     height: 60vh;
     position: absolute;
     width: 34vmin;
-    transform: translateX(130%);
+    transform: translateX(120%);
     align-self: flex-start;
   }
 
@@ -510,7 +510,7 @@
     height: 60vh;
     position: absolute;
     width: 34vmin;
-    transform: translateX(100%);
+    transform: translateX(110%);
     align-self: flex-start;
   }
 
@@ -522,7 +522,7 @@
     height: 60vh;
     position: absolute;
     width: 34vmin;
-    transform: translateX(80%);
+    transform: translateX(90%);
     align-self: flex-start;
   }
 
@@ -534,7 +534,7 @@
     height: 60vh;
     position: absolute;
     width: 34vmin;
-    transform: translateX(60%);
+    transform: translateX(70%);
     align-self: flex-start;
   }
 
@@ -548,7 +548,7 @@
     height: 60vh;
     position: absolute;
     width: 34vmin;
-    transform: translateX(30%);
+    transform: translateX(50%);
     align-self: flex-start;
   }
 
