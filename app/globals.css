@@ -303,6 +303,7 @@
 .dots {
   display: flex;
   justify-content: center;
+  position: fixed;
   width: 40vmin;
   transform: translateX(180%) translateY(-197px);
 }
@@ -468,13 +469,13 @@
   color: #000;
   font-size: 2rem;
   width: 50vmin;
-  transform: translateY(100%) translateX(20%);
+  transform: translateY(100%) translateX(30%);
 }
 
 .companypara {
   width: 80vmin;
   height: 60vh;
-  transform: translateX(32%);
+  transform: translateX(38%);
   font-size: 1rem;
 }
 
@@ -490,6 +491,76 @@
   cursor: pointer;
   margin-left: 320px;
 }
+
+@media (min-width: 1668px) and (max-width: 1800px) {
+
+  .aboutusimg {
+    height: 60vh;
+    position: absolute;
+    width: 34vmin;
+    transform: translateX(130%);
+    align-self: flex-start;
+  }
+
+}
+
+@media (min-width: 1482px) and (max-width: 1669px) {
+
+  .aboutusimg {
+    height: 60vh;
+    position: absolute;
+    width: 34vmin;
+    transform: translateX(100%);
+    align-self: flex-start;
+  }
+
+}
+
+@media (min-width: 1364px) and (max-width: 1482px) {
+
+  .aboutusimg {
+    height: 60vh;
+    position: absolute;
+    width: 34vmin;
+    transform: translateX(80%);
+    align-self: flex-start;
+  }
+
+}
+
+@media (min-width: 1242px) and (max-width: 1364px) {
+
+  .aboutusimg {
+    height: 60vh;
+    position: absolute;
+    width: 34vmin;
+    transform: translateX(60%);
+    align-self: flex-start;
+  }
+
+ 
+
+}
+
+@media (min-width: 800px) and (max-width: 1242px) {
+
+  .aboutusimg {
+    height: 60vh;
+    position: absolute;
+    width: 34vmin;
+    transform: translateX(30%);
+    align-self: flex-start;
+  }
+
+  .companypara {
+    width: 80vmin;
+    height: 60vh;
+    transform: translateX(38%);
+    font-size: .8rem;
+  }
+
+}
+
 
 @media (max-width: 767.98px) {
 
