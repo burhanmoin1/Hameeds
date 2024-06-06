@@ -217,8 +217,8 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 68vh;
-  transform: translateY(15%);
+  height: 80vh;
+  transform: translateY(10%);
   z-index: 80;
   cursor: pointer;
   background: linear-gradient(90deg, rgba(250,250,250,1) 67%, rgba(37,135,60,1) 67%, rgba(5,32,11,1) 98%);
@@ -279,7 +279,7 @@
   color: #2fa74b;
   font-weight: 600;
   text-transform: uppercase;
-  margin-top: -10px;
+  margin-top: 30px;
   transform: translateY(100%);
 }
 
@@ -289,6 +289,7 @@
   margin-top: 20px;
   color: #05200b;
   margin-bottom: 10px;
+  width: 90vmin;
   letter-spacing: -1px;
 }
 
@@ -302,7 +303,8 @@
 .dots {
   display: flex;
   justify-content: center;
-  margin-top: -160px;
+  width: 40vmin;
+  transform: translateX(180%) translateY(-197px);
 }
 
 .dot {
@@ -421,6 +423,8 @@
     justify-content: end;
     margin-top: -40px;
     margin-left: 10px;
+    width: auto;
+  transform: translateX(0) translateY(0);
   }
   
   .dot {
@@ -445,36 +449,33 @@
 
 .Companydetails {
   background-color: #eceaea;
-  height: auto;
+  height: 60vh;
   display: flex;
   flex-direction: column;
-  margin-top: -50px;
-}
-
-.companyheading {
-  font-size: 3rem;
-  color: #000;
-  align-self: center;
-  transform: translateX(-1%) translateY(220%);
-  font-family: "Radio Canada Big";
-  letter-spacing: -1px;
-  margin-right: 120px;
+  margin-top: 50px;
+  align-items: center;
 }
 
 .aboutusimg {
-  position: relative;
-  height: 80vh;
-  width: 40vmin;
-  transform: translateX(80%);
+  height: 60vh;
+  position: absolute;
+  width: 30vmin;
+  transform: translateX(150%);
+  align-self: flex-start;
+}
+
+.companyheading {
+  color: #000;
+  font-size: 2rem;
+  width: 50vmin;
+  transform: translateY(100%) translateX(20%);
 }
 
 .companypara {
   width: 80vmin;
-  align-self: center;
-  position: absolute;
-  margin-top: 220px;
-  transform: translateY(8%) translateX(26%);
-  font-size: 1.28rem;
+  height: 60vh;
+  transform: translateX(32%);
+  font-size: 1rem;
 }
 
 .learn-more-button {
