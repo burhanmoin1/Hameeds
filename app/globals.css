@@ -420,12 +420,10 @@
   }
 
   .dots {
-    display: flex;
-    justify-content: end;
     margin-top: -40px;
-    margin-left: 10px;
-    width: auto;
-  transform: translateX(0) translateY(0);
+    margin-left: 220px;
+    width: 50vmin;
+    transform: translateX(0) translateY(0);
   }
   
   .dot {
@@ -476,7 +474,7 @@
   width: 80vmin;
   height: 60vh;
   transform: translateX(38%);
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .learn-more-button {
@@ -504,29 +502,23 @@
 
 }
 
+/* 125% */
 @media (min-width: 1482px) and (max-width: 1669px) {
 
   .aboutusimg {
     height: 60vh;
     position: absolute;
     width: 34vmin;
-    transform: translateX(130%);
+    transform: translateX(150%);
     align-self: flex-start;
   }
 
-}
-
-/* 125% */
-@media (min-width: 1364px) and (max-width: 1482px) {
-
-  .aboutusimg {
+  .companypara {
+    width: 80vmin;
     height: 60vh;
-    position: absolute;
-    width: 34vmin;
-    transform: translateX(120%);
-    align-self: flex-start;
+    transform: translateX(38%);
+    font-size: 1.2rem;
   }
-
 }
 
 /* 150% */
@@ -550,6 +542,13 @@
     position: fixed;
     width: 40vmin;
     transform: translateX(180%) translateY(-210px);
+  }
+
+  .companypara {
+    width: 80vmin;
+    height: 60vh;
+    transform: translateX(38%);
+    font-size: 1rem;
   }
 
 }
